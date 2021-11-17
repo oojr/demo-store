@@ -1,3 +1,21 @@
+# Demo Store
+This project is built with React Hooks, Redux Toolkit, TailwindCSS, Redux Persist and React Router V6 on the main page the filters can be used to narrow down product selection
+
+<img width="1751" alt="Screen Shot 2021-11-16 at 5 30 41 PM" src="https://user-images.githubusercontent.com/1275902/142092683-0777f4af-cb7b-47f1-b760-3831737ac35e.png">
+
+## Features
+
+### Responsive
+Responsiveness comes from Tailwind it also has a cart implementaion using redux toolkit slices
+
+<img width="520" alt="Screen Shot 2021-11-16 at 5 33 20 PM" src="https://user-images.githubusercontent.com/1275902/142093527-504cae05-9345-4e42-80a1-f01aed002eb3.png">
+
+### Product Detail Page
+ReactRouter is used to route through pages, product detail pages are located on /products/:productId route,
+
+<img width="1392" alt="Screen Shot 2021-11-16 at 5 43 50 PM" src="https://user-images.githubusercontent.com/1275902/142093889-c52e655d-ef44-4a43-bdf6-e1c989882dd3.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
