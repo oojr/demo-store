@@ -1,19 +1,3 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {
@@ -24,6 +8,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 const currencies = ["USD", "CAD", "AUD", "EUR", "GBP"];
 const navigation = {
@@ -97,6 +82,7 @@ function classNames(...classes) {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const shoppingCartItemCount =
     useSelector((state) => state.cart.itemsInCart.length) || 0;
@@ -412,7 +398,7 @@ export default function Header() {
                 <div className="h-16 flex items-center justify-between">
                   {/* Logo (lg+) */}
                   <div className="hidden lg:flex lg:items-center">
-                    <a href="/">WALLIN & NORDSTROM</a>
+                    <Link to="/">WALLIN & NORDSTROM</Link>
                   </div>
 
                   <div className="hidden h-full lg:flex">
@@ -619,7 +605,7 @@ export default function Header() {
                   </div>
 
                   {/* Logo (lg-) */}
-                  <a href="#" className="lg:hidden">
+                  <a onClick={() => navigate("/")} className="lg:hidden">
                     WALLIN & NORDSTROM
                   </a>
 
@@ -657,7 +643,7 @@ export default function Header() {
 
                       <div className="flow-root">
                         <a
-                          href="/cart"
+                          onClick={() => navigate("/")}
                           className="group -m-2 p-2 flex items-center"
                         >
                           <ShoppingCartIcon
