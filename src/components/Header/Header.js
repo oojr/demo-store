@@ -412,7 +412,7 @@ export default function Header() {
                 <div className="h-16 flex items-center justify-between">
                   {/* Logo (lg+) */}
                   <div className="hidden lg:flex lg:items-center">
-                    <a href="/">WALLIS & NORDSTROM</a>
+                    <a href="/">WALLIN & NORDSTROM</a>
                   </div>
 
                   <div className="hidden h-full lg:flex">
@@ -620,7 +620,7 @@ export default function Header() {
 
                   {/* Logo (lg-) */}
                   <a href="#" className="lg:hidden">
-                    WALLIS & NORDSTROM
+                    WALLIN & NORDSTROM
                   </a>
 
                   <div className="flex-1 flex items-center justify-end">

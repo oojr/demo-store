@@ -184,7 +184,7 @@ export default function Catalog() {
             <p className="mt-4 text-base text-gray-500">
               Before the name Nordstrom, the popular luxury department store was
               named Nordstrom Best, before Nordstrom Best, the original name was
-              Wallis & Nordstrom (images provided by{" "}
+              Wallin & Nordstrom (images provided by{" "}
               <a className="text-blue-500 " href="http://nordstrom.com">
                 Nordstrom
               </a>
