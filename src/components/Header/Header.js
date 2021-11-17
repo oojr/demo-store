@@ -8,7 +8,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const currencies = ["USD", "CAD", "AUD", "EUR", "GBP"];
 const navigation = {
@@ -82,7 +82,6 @@ function classNames(...classes) {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
 
   const shoppingCartItemCount =
     useSelector((state) => state.cart.itemsInCart.length) || 0;
@@ -605,9 +604,9 @@ export default function Header() {
                   </div>
 
                   {/* Logo (lg-) */}
-                  <a onClick={() => navigate("/")} className="lg:hidden">
+                  <Link to="/" className="lg:hidden">
                     WALLIN & NORDSTROM
-                  </a>
+                  </Link>
 
                   <div className="flex-1 flex items-center justify-end">
                     <div className="flex items-center lg:ml-8">
@@ -642,8 +641,8 @@ export default function Header() {
                       />
 
                       <div className="flow-root">
-                        <a
-                          onClick={() => navigate("/")}
+                        <Link
+                          to="/cart"
                           className="group -m-2 p-2 flex items-center"
                         >
                           <ShoppingCartIcon
@@ -656,7 +655,7 @@ export default function Header() {
                           <span className="sr-only">
                             items in cart, view bag
                           </span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 import { CheckIcon, ClockIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { createDollarString } from "../../utility";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { removeFromCart } from "../reducers/cart";
 
 export default function Cart() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.itemsInCart);
   const [chaChing, setChaChing] = useState(null);
@@ -151,12 +150,12 @@ export default function Cart() {
             <div className="mt-6 text-sm text-center">
               <p>
                 or{" "}
-                <a
-                  onClick={() => navigate("/")}
+                <Link
+                  to="/ "
                   className="text-gray-600 cursor-pointer font-medium hover:text-gray-500"
                 >
                   Continue Shopping<span aria-hidden="true"> &rarr;</span>
-                </a>
+                </Link>
               </p>
             </div>
           </section>
