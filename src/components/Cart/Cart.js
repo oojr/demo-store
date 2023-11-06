@@ -19,7 +19,7 @@ export default function Cart() {
   useEffect(() => {
     setChaChing(
       new Audio(
-        "https://cloudflare-ipfs.com/ipfs/bafybeibn2yeyrwm2viv4u2kwmidchf5srwdq32apnqkoljqwdj7yfjj5fa/chaChing.mp3"
+        "https://nftstorage.link/ipfs/bafybeibn2yeyrwm2viv4u2kwmidchf5srwdq32apnqkoljqwdj7yfjj5fa/chaChing.mp3"
       )
     );
   }, []);
